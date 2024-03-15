@@ -1,0 +1,6 @@
+Hello,
+did you figure out which known chipher i made in python code?
+There's a hint for it in the flag: CTFkom{it_was_a_vigenere_chipher} and
+the code word was nottheflag :))))
+
+possible password: XZyZpGtrTyghYggT

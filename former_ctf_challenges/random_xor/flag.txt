@@ -1,0 +1,1 @@
+CTFkom{fake_flag}

@@ -1,0 +1,5 @@
+What is the name of the CTF that Datasnok (Login's CTF team) participated in remotely last weekend?
+
+hint: look at ctftime
+
+CTFkom{0xL4ugh}

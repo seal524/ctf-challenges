@@ -1,0 +1,2 @@
+<p>Every letter can also be written as a number. Can you figure out which letters have turned into the string of numbers in the output file?</p>
+<p>Flag syntax: CTFkom{...}</p>

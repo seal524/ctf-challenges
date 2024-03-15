@@ -1,0 +1,42 @@
+Enkel writeup - random xor:
+
+random_xor.py og encrypted_code.txt filen er lagt med. 
+I encrypted_code.txt den ser man det står:
+YWFhUVRRQFNQRkZTQFBCSkdHYWFh
+
+når man ser i koden i random_xor.py inser man at teksten i 
+encrypted_code.txt er cryptert med base64.
+kjører man det gjeonnom Cyberchef får man:
+aaaQTQ@SPFFS@PBJGGaaa
+
+Når man ser i koden etter det innser man at i secretXor() blir
+aaa-ene lagt til og den egentlige koden er:
+QTQ@SPFFS@PBJGG
+
+videre ser man i secretXor kaller et seed og setter alle bokstavene til
+upper som betyr at koden ikke er case-sensitiv:
+text = text.upper()
+r.seed((500 + 1500)/200 * 6 / 300);
+
+så hvis man lager en solved der man xor-er med riktige tall skal man få koden:
+
+import random as r
+encrypted = "QTQ@SPFFS@PBJGG"
+t=""
+r.seed((500 + 1500)/200 * 6 / 300);
+for i in range(len(encrypted)):
+        num = r.randint(1,5)
+        t += chr(ord(encrypted[i]) ^ num)
+print(t)
+
+skal output være:
+SUPERSECRETCODE
+
+når man sender inn riktig kode skal man få flaget (må sette opp dette ved hjelp
+av nc, trenger hjelp der):
+if code == secret_code:
+    print("Congrats you solved the challange!")
+    flag = open("flag.txt", "r").read()
+    print(flag)
+
+flag: CTFkom{C0ngr4ts_y0u_s0lv3d_r4and0m_x0r}
