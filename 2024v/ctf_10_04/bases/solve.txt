@@ -1,0 +1,3 @@
+I had a bit of fun and encrypted a flag with diffrent bases. Can you manage to decrypt the flag?
+
+CTFkom{G01ng_thr0ugh_th3_b4s3s}

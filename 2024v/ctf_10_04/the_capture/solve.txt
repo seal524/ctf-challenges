@@ -1,0 +1,3 @@
+I this task i hosted a html page through localhost with the live server exstension in Visual Studio code and captured the data using wireshark. If you look closely you can find the flag amongst the packages in the capture.
+
+Flag: CTFkom{Y0u_f0und_1t}

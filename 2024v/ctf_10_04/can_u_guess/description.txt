@@ -1,0 +1,3 @@
+BONG-OPPGAVE:
+
+I messed around with python yesterday and made this encryptor. Can you manage to decrypt it?
