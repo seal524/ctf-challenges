@@ -1,0 +1,3 @@
+My good friend Sam who works in IT sent me these two weird files and told me to find a username. Can you help me?
+
+FlagSynatx: CTFom{username}
